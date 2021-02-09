@@ -1,1 +1,50 @@
 Accessing Systems and obtaining support
+==Accessing the command line==
+Command line:
+Shell:
+Bourne-Again-Shell(BASH):
+Shell prompt:
+$ character:
+# character:
+==Shell Basics==
+Command:
+Options:
+Argument:
+==Logging into a Local Computer==
+Terminal:
+Physical Console:
+Virtual Console:
+tty1:
+Headless server:
+Serial Console:
+==Logging over the Network==
+Secure Shell(ssh):
+Public Key Authentication:
+Private Key:
+ssh -i mylab.pem remoteuser@remotehost:
+Host key:
+Man-in-the-middle attack:
+==Logging out==
+exit:
+Ctrl+D:
+*intro* *bash* *console* *pts* *ssh* *ssh-keygen*
+
+==Configuring SSH Key based Authentication==
+private-public scheme:
+ssh-keygen:
+/home/user/.ssh/id_rsa
+/home/user/.ssh/id_rsa.pub
+passphrase:
+ssh-keygen -f .ssh/key-with-pass
+private key 600:
+public key 644:
+==Sharing the public key==
+ssh-copy-id -i .ssh/key-with-pass.pub user@remotehost:
+ssh -i .ssh/key-with-pass user@remotehost:
+==Using ssh-agent for non-interactive authentication==
+ssh agent:
+eval $(ssh-agent):
+ssh-add:
+ssh-add .ssh/key-with-pass
+*ssh-keygen* *ssh-copy-id* *ssh-agent* *ssh-add*
+
